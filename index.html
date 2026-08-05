@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="icon" href="./favicon.png" type="image/png">
 <link rel="stylesheet" href="./vendor/lenis.css">
-<title>ReelAI — Most of a lecture isn't the lesson.</title>
-<meta name="description" content="ReelAI reads the complete transcript of a lecture, then returns only the passage that stands on its own.">
+<title>Nosca — Most of a lecture isn't the lesson.</title>
+<meta name="description" content="Nosca reads the complete transcript of a lecture, then returns only the passage that stands on its own.">
 <style>
 /* ═════════════════════════════════════════════════════════════
    TOKENS
@@ -234,8 +234,8 @@ a { color: inherit; text-decoration: none; }
     transparent 100%
   );
 }
-.wordmark { font-size: 1.25rem; letter-spacing: -0.04em; font-weight: 500; }
-.wordmark i { font-style: normal; color: var(--faint); }
+.wordmark { display: flex; align-items: center; gap: .45rem; font-size: 1.25rem; letter-spacing: -0.04em; font-weight: 500; }
+.brand-mark { display: block; width: 1.15em; height: 1.15em; object-fit: contain; }
 
 /* ═════════════════════════════════════════════════════════════
    PILLS
@@ -457,7 +457,7 @@ section { padding-block: clamp(6rem, 14vh, 10rem); position: relative; }
 .stage[data-chapter="2"] .screen2,
 .stage[data-chapter="3"] .screen3 { opacity: 1 }
 
-/* Screens 2 and 3 share ReelAI's real feed geometry: a centered 9:16
+/* Screens 2 and 3 share Nosca's real feed geometry: a centered 9:16
    reel on a black theater, with feedback actions outside the video.
    Recall replaces the reel inside that exact same frame. */
 .screen .app--feed, .screen .app--recall-stage {
@@ -841,7 +841,7 @@ body:not(.no-js) .timeline { --voice-dash: 1; }
   display: flex; flex-direction: column; gap: 1rem;
 }
 
-/* The opening artifact mirrors ReelAI's actual desktop home shell:
+/* The opening artifact mirrors Nosca's actual desktop home shell:
    navigation on the left, then the same rounded composer and learning
    level control used in the app. */
 .screen .app--home {
@@ -855,10 +855,10 @@ body:not(.no-js) .timeline { --voice-dash: 1; }
   background: #181818; border-right: 1px solid rgba(255,255,255,.07);
 }
 .hero-app-brand {
+  display: flex; align-items: center; gap: .35rem;
   padding: .15rem .55rem; font-size: clamp(.75rem, 1.35vw, 1rem);
   font-weight: 650; letter-spacing: -.045em;
 }
-.hero-app-brand i { font-style: normal; color: #a0a0a0 }
 .hero-app-nav { display: grid; gap: .18rem; margin-top: .9rem }
 .hero-app-navitem {
   min-width: 0; display: grid; grid-template-columns: .95rem minmax(0, 1fr);
@@ -892,7 +892,7 @@ body:not(.no-js) .timeline { --voice-dash: 1; }
   padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1rem, 4vw, 3.5rem)
            clamp(1.35rem, 3vw, 2.2rem);
 }
-.hero-app-mobile-brand { display: none }
+.hero-app-mobile-brand { display: none; align-items: center; gap: .35rem }
 .hero-app-top {
   position: absolute; top: .8rem; right: .9rem;
   width: 1.55rem; height: 1.55rem; display: grid; place-items: center;
@@ -958,10 +958,9 @@ body:not(.no-js) .timeline { --voice-dash: 1; }
   .hero-app-sidebar { display: none }
   .hero-app-main { padding: 3.7rem 1rem 1.2rem }
   .hero-app-mobile-brand {
-    position: absolute; top: 1rem; left: 1rem; display: block;
+    position: absolute; top: 1rem; left: 1rem; display: flex;
     font-size: .88rem; font-weight: 650; letter-spacing: -.04em;
   }
-  .hero-app-mobile-brand i { font-style: normal; color: #888 }
   .hero-app-top { top: .8rem; right: 1rem }
   .hero-app-greeting h3 { font-size: 1.65rem }
   .hero-composer { min-height: 7rem }
@@ -1191,7 +1190,7 @@ body:not(.no-js) .footer-wrap { --footer-opacity: .18; --footer-y: 170px }
   will-change: transform, opacity;
 }
 @media (min-width: 720px) { .footer { grid-template-columns: 2fr 1fr 1fr } }
-.footer-brand { font-size: 1.0625rem; font-weight: 500; letter-spacing: -0.03em }
+.footer-brand { display: flex; align-items: center; gap: .4rem; font-size: 1.0625rem; font-weight: 500; letter-spacing: -0.03em }
 .footer-note { color: var(--faint); font-size: 0.875rem; margin-top: 0.5rem; max-width: 30ch }
 .footer-col { display: flex; flex-direction: column; gap: 0.7rem }
 .footer-col a { color: var(--muted); font-size: 0.9375rem; width: fit-content;
@@ -1408,7 +1407,7 @@ body:not(.no-js) .footer-wrap { --footer-opacity: .18; --footer-y: 170px }
   }
   .stage .screen .app--home { grid-template-columns: 1fr; min-height: 0 }
   .stage .hero-app-sidebar { display: none }
-  .stage .hero-app-mobile-brand { display: block }
+  .stage .hero-app-mobile-brand { display: flex }
   .stage .screen .app--feed,
   .stage .screen .app--recall-stage { min-height: 0 }
   .stage-reel-frame, .stage-recall-frame {
@@ -1437,7 +1436,7 @@ body:not(.no-js) .footer-wrap { --footer-opacity: .18; --footer-y: 170px }
 <div class="backdrop" aria-hidden="true"></div>
 <div class="grain" aria-hidden="true"></div>
 <header class="header">
-  <div class="wordmark">Reel<i>AI</i></div>
+  <div class="wordmark" aria-label="Nosca"><img class="brand-mark" src="./nosca-logo.png" alt="" aria-hidden="true"><span>Nosca</span></div>
   <a class="pill pill--solid" href="https://studyreels.app">Start learning</a>
 </header>
 
@@ -1459,7 +1458,7 @@ body:not(.no-js) .footer-wrap { --footer-opacity: .18; --footer-y: 170px }
       <span class="w">lecture</span> <span class="w">isn't&nbsp;the&nbsp;lesson.</span>
     </h1>
     <p class="lede">
-      ReelAI reads the complete transcript of a lecture, then returns only the
+      Nosca reads the complete transcript of a lecture, then returns only the
       passage that stands on its own.
     </p>
     <div class="actions">
@@ -1471,7 +1470,7 @@ body:not(.no-js) .footer-wrap { --footer-opacity: .18; --footer-y: 170px }
   <!-- ── PINNED CATEGORY STAGE ────────────────────────────── -->
   <section class="stage shell">
    <div class="stage-pin">
-    <div class="stage-controls" role="group" aria-label="Move through ReelAI product cards">
+    <div class="stage-controls" role="group" aria-label="Move through Nosca product cards">
       <button class="stage-control" type="button" data-stage-prev aria-controls="stage-card-rail" aria-label="Previous product card" disabled>
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"></path></svg>
       </button>
@@ -1481,7 +1480,7 @@ body:not(.no-js) .footer-wrap { --footer-opacity: .18; --footer-y: 170px }
       </button>
     </div>
 
-    <div class="stage-grid" id="stage-card-rail" data-stage-card-rail data-lenis-prevent-horizontal role="region" tabindex="-1" aria-label="ReelAI product overview">
+    <div class="stage-grid" id="stage-card-rail" data-stage-card-rail data-lenis-prevent-horizontal role="region" tabindex="-1" aria-label="Nosca product overview">
 
      <div class="cats">
       <article class="cat cat1" aria-labelledby="stage-feed-title">
@@ -1498,7 +1497,7 @@ body:not(.no-js) .footer-wrap { --footer-opacity: .18; --footer-y: 170px }
         <h2 class="cat-title" id="stage-clip-title">Clip</h2>
         <div class="cat-body"><div>
           <p class="cat-lead">Stay with the source. Skip the hunt.</p>
-          <p class="cat-copy">ReelAI opens the original video where the explanation begins, keeps the setup around it, and lets the idea finish.</p>
+          <p class="cat-copy">Nosca opens the original video where the explanation begins, keeps the setup around it, and lets the idea finish.</p>
         </div></div>
       </article>
 
@@ -1507,7 +1506,7 @@ body:not(.no-js) .footer-wrap { --footer-opacity: .18; --footer-y: 170px }
         <h2 class="cat-title" id="stage-recall-title">Recall</h2>
         <div class="cat-body"><div>
           <p class="cat-lead">A tiny check before you move on.</p>
-          <p class="cat-copy">One question from the clip tells you whether it landed. If it didn't, ReelAI knows what to bring back later.</p>
+          <p class="cat-copy">One question from the clip tells you whether it landed. If it didn't, Nosca knows what to bring back later.</p>
         </div></div>
       </article>
      </div>
@@ -1518,7 +1517,7 @@ body:not(.no-js) .footer-wrap { --footer-opacity: .18; --footer-y: 170px }
       <div class="screen screen1">
         <div class="app app--home">
           <aside class="hero-app-sidebar">
-            <div class="hero-app-brand">Reel<i>AI</i></div>
+            <div class="hero-app-brand"><img class="brand-mark" src="./nosca-logo.png" alt="" aria-hidden="true"><span>Nosca</span></div>
             <div class="hero-app-nav">
               <span class="hero-app-navitem is-active"><i class="hero-app-navicon">＋</i><span>New search</span></span>
               <span class="hero-app-navitem"><i class="hero-app-navicon">▶</i><span>Community Reels</span></span>
@@ -1536,7 +1535,7 @@ body:not(.no-js) .footer-wrap { --footer-opacity: .18; --footer-y: 170px }
           </aside>
 
           <div class="hero-app-main">
-            <div class="hero-app-mobile-brand">Reel<i>AI</i></div>
+            <div class="hero-app-mobile-brand"><img class="brand-mark" src="./nosca-logo.png" alt="" aria-hidden="true"><span>Nosca</span></div>
             <span class="hero-app-top">V</span>
             <div class="hero-app-home">
               <div class="hero-app-greeting">
@@ -1656,7 +1655,7 @@ body:not(.no-js) .footer-wrap { --footer-opacity: .18; --footer-y: 170px }
       <div class="section-head reveal">
         <span class="micro">02 — How it feels</span>
         <h2>Less hunting. More “oh, I get it.”</h2>
-        <p class="lede">Long videos, scattered notes, a deadline coming up — ReelAI turns them into a path you can actually follow.</p>
+        <p class="lede">Long videos, scattered notes, a deadline coming up — Nosca turns them into a path you can actually follow.</p>
       </div>
       <div class="rail-controls reveal" aria-label="Move through the product story">
         <button class="rail-button" type="button" data-rail-prev aria-label="Previous card" disabled>
@@ -1668,14 +1667,14 @@ body:not(.no-js) .footer-wrap { --footer-opacity: .18; --footer-y: 170px }
       </div>
     </div>
 
-    <div class="grid" data-card-rail data-lenis-prevent-horizontal tabindex="0" aria-label="Four ways ReelAI helps you learn">
+    <div class="grid" data-card-rail data-lenis-prevent-horizontal tabindex="0" aria-label="Four ways Nosca helps you learn">
       <article class="card card--phone">
         <span class="card-index micro">01 — Bring it in</span>
         <h3 class="card-title">Bring one thing you’re stuck on.</h3>
         <p class="card-body">Type a topic, paste what you're stuck on, or add a PDF, DOCX, or notes. No cleanup required.</p>
         <div class="card-visual card-visual--phone device-right device--home" aria-hidden="true">
           <div class="card-ui home-ui">
-            <div class="mock-appbar"><strong>ReelAI</strong><span>⌕</span></div>
+            <div class="mock-appbar"><strong>Nosca</strong><span>⌕</span></div>
             <div class="home-greeting">
               <strong>Good afternoon</strong>
               <span>What can I help you learn today?</span>
@@ -1700,7 +1699,7 @@ body:not(.no-js) .footer-wrap { --footer-opacity: .18; --footer-y: 170px }
       <article class="card card--phone">
         <span class="card-index micro">02 — Find the moment</span>
         <h3 class="card-title">Skip to the explanation.</h3>
-        <p class="card-body">ReelAI reads the full transcript and opens the original video where the idea actually comes<br>together.</p>
+        <p class="card-body">Nosca reads the full transcript and opens the original video where the idea actually comes<br>together.</p>
         <div class="card-visual card-visual--phone device-right device--reel" aria-hidden="true">
           <div class="card-ui reel-ui">
             <div class="reel-scene">
@@ -1725,7 +1724,7 @@ body:not(.no-js) .footer-wrap { --footer-opacity: .18; --footer-y: 170px }
       <article class="card card--web">
         <span class="card-index micro">03 — Keep moving</span>
         <h3 class="card-title">Turn the deadline into a plan.</h3>
-        <p class="card-body">Tell ReelAI what you need to know and by when. It keeps the next useful task ready for you.</p>
+        <p class="card-body">Tell Nosca what you need to know and by when. It keeps the next useful task ready for you.</p>
         <div class="card-visual card-visual--web device--goals" aria-hidden="true">
           <div class="card-ui goals-ui">
             <div class="goals-nav"><span class="back">‹</span><strong>Thermodynamics — Exam 2</strong><span>Archive</span></div>
@@ -1749,7 +1748,7 @@ body:not(.no-js) .footer-wrap { --footer-opacity: .18; --footer-y: 170px }
       <article class="card card--phone">
         <span class="card-index micro">04 — Make it stick</span>
         <h3 class="card-title">Know when you're ready to move on.</h3>
-        <p class="card-body">A quick check follows each idea. Miss it? ReelAI knows what to bring back before<br>you<br>continue.</p>
+        <p class="card-body">A quick check follows each idea. Miss it? Nosca knows what to bring back before<br>you<br>continue.</p>
         <div class="card-visual card-visual--phone device-right device--recall" aria-hidden="true">
           <div class="card-ui recall-ui">
             <div class="recall-head">
@@ -1776,7 +1775,7 @@ body:not(.no-js) .footer-wrap { --footer-opacity: .18; --footer-y: 170px }
   <section class="shell" id="method">
     <div class="section-head reveal">
       <span class="micro">03 — The method</span>
-      <h2>How ReelAI gets you there.</h2>
+      <h2>How Nosca gets you there.</h2>
     </div>
 
     <div class="steps">
@@ -1835,7 +1834,7 @@ body:not(.no-js) .footer-wrap { --footer-opacity: .18; --footer-y: 170px }
       <p class="lede reveal">The same source-linked reels on every plan. Paid plans give you more daily searches and guided study goals.</p>
     </div>
 
-    <div class="pricing-grid" aria-label="ReelAI pricing plans">
+    <div class="pricing-grid" aria-label="Nosca pricing plans">
       <article class="pricing-card reveal">
         <div class="pricing-plan-head">
           <h3>Free</h3>
@@ -1890,15 +1889,15 @@ body:not(.no-js) .footer-wrap { --footer-opacity: .18; --footer-y: 170px }
 
     <div class="mobile-callout reveal" id="mobile">
       <div class="mobile-copy">
-        <span class="micro">ReelAI on mobile</span>
+        <span class="micro">Nosca on mobile</span>
         <h3>Your study path fits in your pocket.</h3>
-        <p>Open the same reels, history, sets, and goals on your phone. Your ReelAI account keeps everything together across screens.</p>
+        <p>Open the same reels, history, sets, and goals on your phone. Your Nosca account keeps everything together across screens.</p>
         <div class="actions mobile-actions">
-          <a class="pill pill--solid" href="https://studyreels.app">Open ReelAI</a>
+          <a class="pill pill--solid" href="https://studyreels.app">Open Nosca</a>
           <span class="mobile-status">Native iOS app coming soon</span>
         </div>
       </div>
-      <a class="mobile-qr-wrap" href="https://studyreels.app" aria-label="Open ReelAI on your phone">
+      <a class="mobile-qr-wrap" href="https://studyreels.app" aria-label="Open Nosca on your phone">
         <span class="mobile-qr-copy">
           <span class="micro">On desktop?</span>
           <strong>Scan to continue on your phone.</strong>
@@ -1918,7 +1917,7 @@ body:not(.no-js) .footer-wrap { --footer-opacity: .18; --footer-y: 170px }
 
     <div class="faq">
       <details open>
-        <summary>Does ReelAI make new videos?</summary>
+        <summary>Does Nosca make new videos?</summary>
         <div class="faq-answer"><div><p>No. It finds useful moments in real videos and opens them at the right timestamp, so you keep the original explanation and speaker.</p></div></div>
       </details>
       <details>
@@ -1927,11 +1926,11 @@ body:not(.no-js) .footer-wrap { --footer-opacity: .18; --footer-y: 170px }
       </details>
       <details>
         <summary>Why not just ask for a summary?</summary>
-        <div class="faq-answer"><div><p>A summary can flatten the example or turn of phrase that made an idea click. ReelAI takes you back to the original words and the moment around them.</p></div></div>
+        <div class="faq-answer"><div><p>A summary can flatten the example or turn of phrase that made an idea click. Nosca takes you back to the original words and the moment around them.</p></div></div>
       </details>
       <details>
         <summary>What if the video has no captions?</summary>
-        <div class="faq-answer"><div><p>ReelAI can create timestamped transcript cues first, then use those cues to find and play the relevant moment.</p></div></div>
+        <div class="faq-answer"><div><p>Nosca can create timestamped transcript cues first, then use those cues to find and play the relevant moment.</p></div></div>
       </details>
     </div>
   </section>
@@ -1963,7 +1962,7 @@ body:not(.no-js) .footer-wrap { --footer-opacity: .18; --footer-y: 170px }
 <div class="footer-wrap shell">
 <footer class="footer">
   <div>
-    <div class="footer-brand">Reel<i style="font-style:normal;color:var(--faint)">AI</i></div>
+    <div class="footer-brand"><img class="brand-mark" src="./nosca-logo.png" alt="" aria-hidden="true"><span>Nosca</span></div>
     <p class="footer-note">A focused learning feed built from the sources that make things click.</p>
   </div>
   <nav class="footer-col" aria-label="Product">
@@ -2272,10 +2271,10 @@ body:not(.no-js) .footer-wrap { --footer-opacity: .18; --footer-y: 170px }
       stageRail.tabIndex = compactStageQuery.matches ? 0 : -1;
       if (compactStageQuery.matches) {
         stageRail.setAttribute('aria-roledescription', 'carousel');
-        stageRail.setAttribute('aria-label', 'ReelAI product cards');
+        stageRail.setAttribute('aria-label', 'Nosca product cards');
       } else {
         stageRail.removeAttribute('aria-roledescription');
-        stageRail.setAttribute('aria-label', 'ReelAI product overview');
+        stageRail.setAttribute('aria-label', 'Nosca product overview');
       }
       if (!compactStageQuery.matches) {
         stagePrev.disabled = true;

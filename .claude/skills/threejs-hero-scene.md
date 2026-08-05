@@ -23,8 +23,8 @@ When building 3D landing page scenes:
 - Pause or simplify animation on mobile.
 - Respect `prefers-reduced-motion`.
 
-## ReelAI Style
-For ReelAI, the best hero object is:
+## Nosca Style
+For Nosca, the best hero object is:
 - an infinite ribbon of floating reel cards
 - a neural media core
 - a portal of endless content

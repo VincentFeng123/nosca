@@ -23,7 +23,7 @@ Write copy like a serious startup, not a generic AI tool.
 - Specific user pain.
 - Clear product explanation.
 
-## ReelAI Examples
+## Nosca Examples
 Bad:
 “Unlock the future of AI-powered learning.”
 
@@ -34,4 +34,4 @@ Bad:
 “Revolutionize the way you consume educational content.”
 
 Good:
-“Stop searching through hour-long videos. ReelAI finds the moments that matter.”
+“Stop searching through hour-long videos. Nosca finds the moments that matter.”

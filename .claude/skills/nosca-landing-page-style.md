@@ -1,6 +1,6 @@
-# ReelAI Landing Page Style Skill
+# Nosca Landing Page Style Skill
 
-ReelAI is an AI-powered infinite learning reels platform.
+Nosca is an AI-powered infinite learning reels platform.
 
 ## Brand Feeling
 - Premium
@@ -29,12 +29,12 @@ Scene idea:
 3. The stream bends into an infinite ribbon.
 4. Camera flies through the ribbon.
 5. Cards organize by topic.
-6. Ribbon collapses into the ReelAI logo.
+6. Ribbon collapses into the Nosca logo.
 
 ## Content Sections
 - Hero: “Learn anything through endless AI-curated reels.”
 - Problem: videos are too long and scattered.
-- Solution: ReelAI finds the best moments.
+- Solution: Nosca finds the best moments.
 - Demo: topic input generates a reel feed.
 - Technology: search, transcript, segmentation, ranking.
 - Use cases: AP Physics, coding, history, fitness, skills.
